@@ -7,6 +7,7 @@
     <title>Portfolio</title>
 
     <style>
+       
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: darkgray;
@@ -50,7 +51,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -62,7 +63,7 @@
         }
 
         section {
-            padding: 20px;
+            padding: 15px;
             margin: 0 auto;
             max-width: 800px;
             background-color: #fff;
@@ -92,7 +93,24 @@
             background-color: #1d5fe2;
         }
     </style>
-
+<script>
+    function openPopup() {
+        var url = "24.PNG"; 
+        var popupWidth = 300;
+        var popupHeight = 300; 
+        var leftPosition = (screen.width - popupWidth) / 3;
+        var topPosition = (screen.height - popupHeight) / 3;
+        window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
+    }
+    function openPopu1() {
+        var url = "https://de.wikipedia.org/wiki/Wismar"; 
+        var popupWidth = 925; 
+        var popupHeight = 500; 
+        var leftPosition = (screen.width - popupWidth) / 1;
+        var topPosition = (screen.height - popupHeight) / 3;
+        window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
+    }
+</script>
 </head>
 <body>
     <header>
@@ -104,16 +122,16 @@
         <div class="navbar">
             <section style="font-size: 22px;">Ich mache gerade eine Umschulung zum Fachinformatiker für Anwendungsentwicklung.</section>
             <br>
-            <a href="https://www.bing.com/images/search?view=detailV2&ccid=MD2M%2bdKm&id=4B802E2B4A34B608325CF5DE234F03ADDAFF963C&thid=OIP.MD2M-dKmm2gG9xetDbjpnwAAAA&mediaurl=https%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fthumb%2f3%2f33%2f24-Logo.svg%2f1200px-24-Logo.svg.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.303d8cf9d2a69b6806f717ad0db8e99f%3frik%3dPJb%252f2q0DTyPe9Q%26pid%3dImgRaw%26r%3d0&exph=251&expw=474&q=24&simid=607996103649460526&FORM=IRPRST&ck=C493F85BD969AB16C0D744153FD9E364&selectedIndex=0&itb=0&ajaxhist=0&ajaxserp=0" style="font-size: 22px;">Alter</a>
-            <a href="https://de.wikipedia.org/wiki/Wismar" style="font-size: 22px;">Herkunft</a>
-            <a href="https://store.steampowered.com/" style="font-size: 22px;">Hobbys</a>
+            <a href="javascript:void(0);" onclick="openPopup();" style="font-size: 22px;">Alter</a>
+            <a href="javascript:void(0);" onclick="openPopu1();" style="font-size: 22px;">Herkunft</a>
+            <a href="https://steamcommunity.com/id/ichfickdeineoma/" style="font-size: 22px;">Hobbys</a>
             <a href="about.html" style="font-size: 27px;">Wenn du mehr wissen willst, klicke hier!</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Julien-Justin Donath. Alle Rechte vorbehalten.</p>
-        <a href="Datenschutz.html" style="font-size: 4;">Datenschutzerklärung</a>
+        <p>2024 Julien-Justin Donath. Alle Rechte vorbehalten.<sup>&copy;</sup> </p>
+        <a href="Datenschutz.html" style="font-size: 4;">|Datenschutzerklärung|Impressum|</a>
 
     </footer>
 </body>
