@@ -110,6 +110,17 @@
         var topPosition = (screen.height - popupHeight) / 3;
         window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
     }
+        function checkDevice() {
+            // Überprüfe die Breite des Viewports, um zwischen Desktop und Mobilgerät zu unterscheiden
+            var isMobile = window.innerWidth <= 768; // Du kannst diese Grenze anpassen, um sie deinen Anforderungen anzupassen
+            
+            if (isMobile) {
+                alert("Sie verwenden ein Mobilgerät.");
+            } else {
+                alert("Sie verwenden einen Desktop-Computer.");
+            }
+        }
+        window.onload = checkDevice;
 </script>
 </head>
 <body>
