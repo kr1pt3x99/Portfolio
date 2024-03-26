@@ -11,6 +11,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         header {
@@ -27,51 +34,71 @@
         }
         h2 {
             margin: 0;
-            font-size: 16px;
+            font-size: 17px;
         }
         h3, h4, h5, h6, h7, h8, h9 {
             margin: 0;
             font-size: 17px;
+            font-style: italic;
         }
 
         section {
-            padding: 10px;
+            padding: 15px;
             margin: 0 auto;
-            max-width: 800px;
+            max-width: 1400px;
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
-        }
+            font-size: 15px;
 
+        }
 
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            margin-top: auto;
         }
 
         footer p {
             margin: 0;
             font-size: 14px;
         }
+        .menu {
+            position: fixed;
+            left: 30px; 
+            top: 20%; 
+            transform: translateY(-50%);
+        }
 
+        .menu a {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Datenschutzerklärung</h1>
+    <h1>Datenschutzerklärung/Impressum</h1>
 </header>
-
+        <div style="line-height: 190%;" class="menu">
+            <a href="index.html">Zurück</a>
+            <a href="Formular.html">Kontaktformular</a>
+            <a href="http://www.wismar-bulls.de">Wismar Bulls</a>
+            <a href="about.html">über mich</a>
+            
+        </div>
 <section>
     <h2>Als Betreiber dieser Website nehme ich den Schutz deiner persönlichen Daten sehr ernst. Ich behandele deine personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</h2>
     
-    <p>
+    <p style="height: 30px;">
         <h3>1.Erfassung und Verarbeitung personenbezogener Daten.</h3>
         <p>Beim Besuch meiner Website werden automatisch Informationen über den Zugriff (z.B. Datum und Uhrzeit des Zugriffs, verwendeter Browser, Betriebssystem) in sogenannten Server-Logfiles gespeichert. Diese Daten sind nicht bestimmten Personen zuordenbar und werden ausschließlich zur Sicherstellung eines reibungslosen Betriebs der Website sowie zur Sicherheit und Verbesserung meines Angebots verwendet.
         Darüber hinaus werden personenbezogene Daten (z.B. Name, E-Mail-Adresse) nur dann erhoben, wenn du sie mir freiwillig zur Verfügung stellst, z.B. im Rahmen einer Anfrage per E-Mail oder über ein Kontaktformular. Diese Daten werden ohne deine ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
@@ -84,16 +111,22 @@
         <h7>5.Änderungen dieser Datenschutzerklärung</h7>
         <p>Diese Datenschutzerklärung kann jederzeit und ohne vorherige Ankündigung geändert werden. Die jeweils aktuelle Version ist auf der Website verfügbar.</p>
         <h8>6.Kontakt</h8>
-        <p>Für Fragen zum Datenschutz auf meiner Website kannst du mich unter julienjdonath@gmail.com kontaktieren.</p>
+        <p>Für Fragen zum Datenschutz auf meiner Website kannst du mich über das Kontaktformular kontaktieren.</p>
         <h9>7.Urheberrecht an Bildern</h9>
         <p>Alle auf dieser Website veröffentlichten Bilder sind urheberrechtlich geschützt und gehören, sofern nicht anderweitig angegeben, dem Betreiber dieser Website. Jegliche Verwendung, Reproduktion oder Weitergabe der Bilder bedarf der ausdrücklichen Zustimmung des Website-Betreibers.</p>
+   
+    </p>
 
-        </p>
 </section>
-
+        <p style="color: #84788f;">Impressum: <br> 
+            Julien-Justin Donath<br> 
+            Max-Reichpietch Weg 9 <br> 
+            23968 Wismar<br> 
+        </p>
 <footer>
-    <p>&copy; 2024 Julien-Justin Donath. Alle Rechte vorbehalten.</p>
-    <a href="index.html" style="font-size: 4;">Datenschutzerklärung</a>
+    <p>2024 Julien-Justin Donath. Alle Rechte vorbehalten.<sup>&copy;</sup> </p>
+    <a href="index.html" style="font-size: 4;">|Datenschutzerklärung|Impressum|</a>
+
 
 </footer>
 
