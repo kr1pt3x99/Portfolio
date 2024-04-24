@@ -5,6 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über mich</title>
     <style>
+        
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }        
+        
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(20px);
+            }
+         }
+
+        @keyframes blink {
+            0% {
+                height: 20px;
+            }
+            50% {
+                height: 5px;
+            }
+            100% {
+                height: 20px;
+            }
+        }
+        
+        .emoji {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            border: 4px solid black;
+            animation: slideInFromTop 1s ease forwards;
+        }
+        .emoji::before,
+        .emoji::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            width: 15px;
+            height: 15px;
+            background: black;
+            border-radius: 50%;
+        }
+        .emoji::before {
+            left: 25%;
+        }
+        .emoji::after {
+            right: 25%;
+        }
+        .mouth {
+            position: relative;
+            width: 50px;
+            height: 10px;
+            border-radius: 50%;
+            border-bottom: 20px solid black;
+            top: 50%;
+            left: 25%;
+        }
+
+
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: darkgray;
@@ -25,33 +116,10 @@
             margin-bottom: 20px;
             animation: slideInFromTop 1s ease forwards;
         }
-
-        @keyframes slideInFromTop {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
         h1 {
             margin: 0;
             font-size: 36px;
             animation: slideInFromLeft 1s ease forwards;
-        }
-
-        @keyframes slideInFromLeft {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
         }
 
         section {
@@ -104,36 +172,9 @@
             font-size: 16px;
             color: #333;
         }
-        @keyframes slideInFromTop {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideInFromLeft {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideInFromBottom {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
+
+
+
     </style>
 </head>
 <body>
@@ -176,7 +217,12 @@
         Ich bin motiviert, meine Fähigkeiten weiter auszubauen und eine erfolgreiche Karriere in der IT-Branche anzustreben, und meine Leidenschaft für Basketball wiederzuentdecken.
     </p>
 </section>
-
+<div class="smiley">
+    <div class="emoji">
+            <div class="mouth"></div>
+          </div>
+    </div>
+</div>
 <footer>
     <p>2024 Julien-Justin Donath. Alle Rechte vorbehalten.<sup>&copy;</sup> </p>
     <a href="Datenschutz.html" style="font-size: 4;">|Datenschutzerklärung|Impressum|</a>
@@ -186,7 +232,6 @@
 
 </body>
 </html>
-
 
 </body>
 </html>
