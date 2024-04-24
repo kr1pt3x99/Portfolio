@@ -23,11 +23,35 @@
             padding: 20px;
             text-align: center;
             margin-bottom: 20px;
+            animation: slideInFromTop 1s ease forwards;
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         h1 {
             margin: 0;
             font-size: 36px;
+            animation: slideInFromLeft 1s ease forwards;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         section {
@@ -39,6 +63,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             font-size: 15px;
             font-style: italic;
+            animation: slideInFromLeft 1s ease forwards;
         }
 
         h2 {
@@ -56,17 +81,20 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            animation: slideInFromBottom 1s ease forwards;
         }
 
         footer p {
             margin: 0;
             font-size: 14px;
         }
+
         .menu {
             position: fixed;
-            left: 30px; 
-            top: 20%; 
+            left: 30px;
+            top: 20%;
             transform: translateY(-50%);
+            animation: slideInFromLeft 1s ease forwards;
         }
 
         .menu a {
@@ -76,20 +104,10 @@
             color: #333;
         }
     </style>
-        <div  style="line-height: 190%;" class="menu">
-            <a href="index.html">Zurück</a>
-            <a href="Formular.html">Kontaktformular</a>
-            <a href="http://www.wismar-bulls.de">Wismar Bulls</a>
-            
-            
-        </div>
 </head>
 <body>
 
 <header>
-
-
-
     <h1>Willkommen auf meiner Seite</h1>
 </header>
 
@@ -118,20 +136,20 @@
         <br>
         <br> 
         Ich bin motiviert, meine Fähigkeiten weiter auszubauen und eine erfolgreiche Karriere in der IT-Branche anzustreben, und meine Leidenschaft für Basketball wiederzuentdecken.
-        
-        
-
-
     </p>
-    
 </section>
 
 <footer>
     <p>2024 Julien-Justin Donath. Alle Rechte vorbehalten.<sup>&copy;</sup> </p>
     <a href="Datenschutz.html" style="font-size: 4;">|Datenschutzerklärung|Impressum|</a>
-
-
 </footer>
+
+<div class="menu">
+    <a href="index.html">Zurück</a>
+    <a href="Formular.html">Kontaktformular</a>
+    <a href="http://www.wismar-bulls.de">Wismar Bulls</a>
+    <a href="about.html">über mich</a>
+</div>
 
 </body>
 </html>
