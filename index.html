@@ -28,25 +28,64 @@
             padding: 20px;
             text-align: center;
             margin-bottom: 20px;
+            animation: slideInFromTop 1s ease forwards;
         }
 
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
         h1 {
             margin: 0;
             font-size: 36px;
+            animation: slideInFromLeft 1s ease forwards;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .header-image {
             width: 50%;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            animation: slideInFromRight 1s ease forwards;
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .image-container {
-            background-color: darkgrey;
-            padding: 30px;
-            display: flex;
-            justify-content: center;
+            display: flex; /* Um den Bildcontainer zu einem Flex-Container zu machen */
+            align-items: center; /* Vertikal zentrieren */
+        }
+
+        .navbar {
+            animation: slideInFromRight 1s ease forwards;
+            margin-top: 20px;
+            margin-left: left; /* Navbar rechts ausrichten */
         }
 
         footer {
@@ -57,6 +96,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            animation: slideInFromBottom 1s ease forwards;
         }
 
         footer p {
@@ -71,12 +111,14 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideInFromLeft 1s ease forwards;
         }
 
         .navbar {
             display: flex;
             flex-direction: column;
             align-items: left;
+            padding-left: 200px;
         }
 
         .navbar a {
@@ -88,47 +130,21 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.7s;
+            transition: background-color 1s;
         }
 
         .navbar a:hover {
             background-color: #1d5fe2;
         }
-                @media only screen and (max-width: 480px) {
+
+        @media only screen and (max-width: 768px) {
             .header-image {
                 width: 100%; 
-                height: 100%;
+                height: auto;
             }
         }
 
     </style>
-<script>
-    function openPopup() {
-        var url = "24.PNG"; 
-        var popupWidth = 300;
-        var popupHeight = 300; 
-        var leftPosition = (screen.width - popupWidth) / 3;
-        var topPosition = (screen.height - popupHeight) / 3;
-        window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
-    }
-    function openPopu1() {
-        var url = "https://de.wikipedia.org/wiki/Wismar"; 
-        var popupWidth = 925; 
-        var popupHeight = 500; 
-        var leftPosition = (screen.width - popupWidth) / 1;
-        var topPosition = (screen.height - popupHeight) / 3;
-        window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
-    }
-        function checkDevice() {
-            // Überprüfe die Breite des Viewports, um zwischen Desktop und Mobilgerät zu unterscheiden
-            var isMobile = window.innerWidth <= 480; // Du kannst diese Grenze anpassen, um sie deinen Anforderungen anzupassen
-            
-            if (isMobile) {
-                alert("Sie verwenden ein Mobilgerät.");
-            } 
-        }
-        window.onload = checkDevice;
-</script>
 </head>
 <body>
     <header>
@@ -142,7 +158,7 @@
             <br>
             <a href="javascript:void(0);" onclick="openPopup();" style="font-size: 22px;">Alter</a>
             <a href="javascript:void(0);" onclick="openPopu1();" style="font-size: 22px;">Herkunft</a>
-            <a href="https://steamcommunity.com/id/JJD1999420" style="font-size: 22px;">Hobbys</a>
+            <a href="https://steamcommunity.com/id/ichfickdeineoma/" style="font-size: 22px;">Hobbys</a>
             <a href="about.html" style="font-size: 27px;">Wenn du mehr wissen willst, klicke hier!</a>
         </div>
     </div>
@@ -150,7 +166,26 @@
     <footer>
         <p>2024 Julien-Justin Donath. Alle Rechte vorbehalten.<sup>&copy;</sup> </p>
         <a href="Datenschutz.html" style="font-size: 4;">|Datenschutzerklärung|Impressum|</a>
-
     </footer>
+
+    <script>
+        function openPopup() {
+            var url = "24.PNG"; 
+            var popupWidth = 300;
+            var popupHeight = 300; 
+            var leftPosition = (screen.width - popupWidth) / 3;
+            var topPosition = (screen.height - popupHeight) / 3;
+            window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
+        }
+
+        function openPopu1() {
+            var url = "https://de.wikipedia.org/wiki/Wismar"; 
+            var popupWidth = 925; 
+            var popupHeight = 500; 
+            var leftPosition = (screen.width - popupWidth) / 1;
+            var topPosition = (screen.height - popupHeight) / 3;
+            window.open(url, "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + leftPosition + ",top=" + topPosition);
+        }
+    </script>
 </body>
 </html>
