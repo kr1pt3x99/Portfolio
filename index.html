@@ -9,7 +9,8 @@
     <style>
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: darkgray;
+            background:linear-gradient( blue,green
+            );
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,8 +23,8 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #182155;
+            color: #021ec0;
             padding: 20px;
             text-align: center;
             margin-bottom: 20px;
@@ -37,13 +38,15 @@
         }
 
         .header-image {
-            width: 50%;
-            padding-left: 5px;
+            width: 45%;
+            padding-left: 15px;
             padding-right: 5px;
+            padding-bottom: 15px;
             animation: slideInFromRight 1s ease forwards;
         }
 
         .image-container {
+            line-height: 130%;
             display: flex;
             align-items: center;
         }
@@ -55,8 +58,8 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #052e0c;
+            color: #015a1e;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -72,10 +75,11 @@
         }
 
         section {
+            color: rgb(0, 15, 80);
             padding: 15px;
             margin: 0 auto;
             max-width: 400px;
-            background-color: #fff;
+            background-color: #2d3fa8;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             animation: slideInFromLeft 1s ease forwards;
@@ -93,8 +97,8 @@
             font-size: 22px;
             margin-bottom: 10px;
             padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
+            background-color: #1c5532;
+            color: #073d00;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -102,7 +106,7 @@
         }
 
         .navbar a:hover {
-            background-color: #1d5fe2;
+            background-color: #829aca;
         }
 
         @keyframes slideInFromTop {
@@ -171,22 +175,20 @@
         }
 
 
-        .age-link:hover + .age-tooltip {
-            display: inline-block;
-        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Meine erste Website!</h1>
+        <h1>Moin!</h1>
     </header>
 
     <div class="image-container">
-        <img class="header-image" src="bewerbungsfoto.jpg">
+        <img class="header-image" src="cybertinker.jpg">
         <div class="navbar">
             <section style="font-size: 22px;">Ich mache gerade eine Umschulung zum Fachinformatiker für Anwendungsentwicklung.</section>
             <br>
-            <a  class="age-link" style="font-size: 22px;">Alter</a><span class="age-tooltip">24</span>
+            
             <a href="Wismar.html" class="age-link" style="font-size: 22px;">Herkunft</a><span class="age-tooltip">Wismar</span>
             <a href="https://steamcommunity.com/id/JJD1999420/" style="font-size: 22px;">Hobbys</a>
             <a href="about.html" style="font-size: 27px;">Wenn du mehr wissen willst, klicke hier!</a>
